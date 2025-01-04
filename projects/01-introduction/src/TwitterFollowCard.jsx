@@ -2,6 +2,9 @@ import PropTypes from 'prop-types';
 
 export function TwitterFollowCard({username, children, isFollowing}) {
     const text = isFollowing ? 'Siguiendo' : 'Seguir';
+    const buttonClassName = isFollowing 
+    ? 'tw-followCard-button tw-followCard-button-following' 
+    : 'tw-followCard-button';
 
     return (
         <article className='tw-followCard'>
@@ -16,7 +19,7 @@ export function TwitterFollowCard({username, children, isFollowing}) {
             </header>
             
             <aside>
-                <button className='tw-followCard-button'>{text}</button>
+                <button className={buttonClassName}>{text}</button>
             </aside>
         </article>
     )
