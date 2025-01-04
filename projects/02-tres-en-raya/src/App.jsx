@@ -37,6 +37,17 @@ function App() {
   const [turn, setTurn] = useState(TURNS.O)
 
   const [winner, setWinner] = useState(null)
+  
+  const checkWinner = () => {
+    for (const combo of winner_combo) {
+      const [a, b, c] = combo
+      if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+        setWinner(board[a])
+        return
+      }
+    }
+    return null
+  }
 
   const updateBoard = (index) => {
     if (board[index]) return
