@@ -1,8 +1,34 @@
 import './App.css'
 
+const TURNS = {
+  X: 'x',
+  O: 'o'
+}
+
+const board = Array(9).fill(null)
+
+const Square = ({ children, updateBoard, index }) => {
+  return(
+    <div className='square'>
+      {children}
+    </div>
+  )
+}
+
 function App() {
   return (
-    <h1>Tic Tac Toe</h1>
+    <main className='board'>
+      <h1>Tic Tac Toe</h1>
+      <section className='game'>
+        {
+          board.map((cell, index) => {
+            return (
+              <Square key={index} index={index} updateBoard={() => {}}>{cell}</Square>
+            )
+          })
+        }
+      </section>
+    </main>
   )
 }
 
