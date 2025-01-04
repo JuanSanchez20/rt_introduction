@@ -3,5 +3,6 @@ body{
     background-color: #222;
     font-family: system-ui;
     display: grid;
-    place-content: center;
+    place-items: center;
+    height: 100vh;
 }
