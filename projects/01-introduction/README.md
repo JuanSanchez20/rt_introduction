@@ -4,3 +4,6 @@ El main es el inicio del proyecto, es donde todo se une y muestra lo que contien
 
 Un componente es una funcion que crea un elemento.
 
+Lo principal de esta biblioteca es la reutilizacion de componentes
+
+La base de la reutilizacion de los componentes son las propiedades.
