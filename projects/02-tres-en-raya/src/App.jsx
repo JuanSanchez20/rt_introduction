@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import PropTypes from 'prop-types'
 import './App.css'
 
 const TURNS = {
@@ -11,7 +10,7 @@ const Square = ({ children, isSelected, updateBoard, index }) => {
   const className = `square ${isSelected ? 'is-selected' : ''}`
   
   const handleClick = () => {
-    updateBoard()
+    updateBoard(index)
   }
 
   return(
@@ -26,9 +25,15 @@ function App() {
 
   const [turn, setTurn] = useState(TURNS.O)
 
-  const updateBoard = () =>{
+  const updateBoard = (index) =>{
+    const newBoard = [...board]
+    newBoard[index] = turn
+    setBoard(newBoard)
+
     const newTurn = turn === TURNS.O ? TURNS.X : TURNS.O
     setTurn(newTurn)
+
+    console.log(newBoard, newTurn)
   }
 
   return (
@@ -55,13 +60,6 @@ function App() {
       </section>
     </main>
   )
-}
-
-App.propTypes = {
-  children: PropTypes.node,
-  isSelected: PropTypes.bool,
-  updateBoard: PropTypes.func,
-  index: PropTypes.number
 }
 
 export default App
