@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export function TwitterFollowCard({username, name}) {
     return (
         <article className='tw-followCard'>
@@ -17,3 +19,9 @@ export function TwitterFollowCard({username, name}) {
         </article>
     )
 }
+
+// Validación de las propiedades
+TwitterFollowCard.propTypes = {
+    username: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired
+};
