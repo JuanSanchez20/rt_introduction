@@ -24,3 +24,6 @@ Ternaria equivale a un dato de tipo condicional.
 
 Los handle permiten añadir ciertas funcionalidades en react.
 Devuelve un array de dos valores el 0 y el 1. El representa si esta activado o desactivado y el 1 es como el interruptor del elemento.
+
+Imperactivo es cuando le especifica todo lo que tiene que hacer y como.
+Declarativo es solamente lo que se quiere hacer segun el estado.
