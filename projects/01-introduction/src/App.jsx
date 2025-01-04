@@ -13,8 +13,8 @@ const users = [
         isFollowing: true
     },
     {
-        userName: 'elonmusk',
-        name: 'Elon Musk',
+        userName: 'TMChein',
+        name: 'Tomas Chein',
         isFollowing: false
     }
 ]
@@ -26,9 +26,9 @@ export function App() {
             users.map((user) => {
                 const { userName, name, isFollowing } = user
                 return (
-                    <TwitterFollowCard username={userName} 
+                    <TwitterFollowCard key={userName} 
                                         initialIsFollowing={isFollowing}
-                                        key={userName}>
+                                        username={userName}>
                         {name}
                     </TwitterFollowCard>
                 )
