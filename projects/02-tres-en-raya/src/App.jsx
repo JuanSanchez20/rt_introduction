@@ -50,7 +50,7 @@ function App() {
   }
 
   const updateBoard = (index) => {
-    if (board[index]) return
+    if (board[index] || winner) return
 
     const newBoard = [...board]
     newBoard[index] = turn
@@ -58,6 +58,11 @@ function App() {
 
     const newTurn = turn === TURNS.O ? TURNS.X : TURNS.O
     setTurn(newTurn)
+
+    const newWinner = checkWinner()
+    if (newWinner) {
+      setWinner(newWinner)
+    }
   }
 
   return (
