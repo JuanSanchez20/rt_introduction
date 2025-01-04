@@ -44,8 +44,7 @@ function App() {
       if (boardToCheck[a] && 
           boardToCheck[a] === boardToCheck[b] && 
           boardToCheck[a] === boardToCheck[c]) {
-        setWinner(boardToCheck[a])
-        return
+        return boardToCheck[a]
       }
     }
     return null
@@ -64,6 +63,7 @@ function App() {
     const newWinner = checkWinner(newBoard)
     if (newWinner) {
       setWinner(newWinner)
+      alert(`Player ${newWinner} wins!`)
     }
   }
 
