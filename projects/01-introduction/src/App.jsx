@@ -1,9 +1,17 @@
 export function App() {
     return (
-        <div className="">
-            <h1>
-                TwitterCard
-            </h1>
-        </div>
+        <article>
+            <header>
+                <img src="https://unavatar.io/midudev" alt="Avatar de Midudev" />
+                <div>
+                    <strong>Miguel Angel Durán</strong>
+                    <span>@midudev</span>
+                </div>
+            </header>
+            
+            <aside>
+                <button>Seguir</button>
+            </aside>
+        </article>
     )
 }
