@@ -4,9 +4,15 @@ import { TwitterFollowCard } from './TwitterFollowCard.jsx'
 export function App() {
     return(
     <section className='App'>
-        <TwitterFollowCard username='midudev' name='Miguel Ángel Durán'/>
-        <TwitterFollowCard username='pherald' name='Pablo Hernandez'/>
-        <TwitterFollowCard username='elonmusk' name='Elon Musk'/>
+        <TwitterFollowCard username='midudev'>
+            Miguel Angel Durán
+        </TwitterFollowCard>
+        <TwitterFollowCard username='pherald'>
+            Pablo Hernandez
+        </TwitterFollowCard>
+        <TwitterFollowCard username='elonmusk'>
+            Elon Musk
+        </TwitterFollowCard>
     </section>
     )
 }
