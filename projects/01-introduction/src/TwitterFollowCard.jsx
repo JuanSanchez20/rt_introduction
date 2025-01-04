@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 
-export function TwitterFollowCard({username, children}) {
-    const [isFollowing, setIsFollowing] = useState(false);
+export function TwitterFollowCard({username, children, initialIsFollowing}) {
+    const [isFollowing, setIsFollowing] = useState(initialIsFollowing);
 
     const text = isFollowing ? 'Siguiendo' : 'Seguir';
     const buttonClassName = isFollowing 
@@ -26,7 +26,10 @@ export function TwitterFollowCard({username, children}) {
             </header>
             
             <aside>
-                <button className={buttonClassName} onClick={handleClick}>{text}</button>
+                <button className={buttonClassName} onClick={handleClick}>
+                    <span className='tw-followCard-text'>{text}</span>
+                    <span className='tw-followCard-stopFollow'>Dejar de Seguir</span>
+                    </button>
             </aside>
         </article>
     )
@@ -35,5 +38,6 @@ export function TwitterFollowCard({username, children}) {
 // Validación de las propiedades
 TwitterFollowCard.propTypes = {
     username: PropTypes.string.isRequired,
-    children: PropTypes.string.isRequired
+    children: PropTypes.string.isRequired,
+    initialIsFollowing: PropTypes.bool
 };

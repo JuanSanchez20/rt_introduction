@@ -23,7 +23,8 @@ Renderizado condicional.
 Ternaria equivale a un dato de tipo condicional.
 
 Los handle permiten añadir ciertas funcionalidades en react.
-Devuelve un array de dos valores el 0 y el 1. El representa si esta activado o desactivado y el 1 es como el interruptor del elemento.
+Devuelve un array de dos posiciones el 0 y el 1. El 0 representa si esta activado o desactivado y el 1 es como el interruptor del elemento o la forma de actualizarlo.
+El estado inicial del handle solo se inicia una sola vez.
 
 Imperactivo es cuando le especifica todo lo que tiene que hacer y como.
 Declarativo es solamente lo que se quiere hacer segun el estado.
