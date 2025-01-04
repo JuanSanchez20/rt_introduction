@@ -1,6 +1,11 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
 export function TwitterFollowCard({username, children, isFollowing}) {
+    const state = useState(false);
+    const isFollowing = state[0];
+    const setIsFollowing = state[1];
+    
     const text = isFollowing ? 'Siguiendo' : 'Seguir';
     const buttonClassName = isFollowing 
     ? 'tw-followCard-button tw-followCard-button-following' 
