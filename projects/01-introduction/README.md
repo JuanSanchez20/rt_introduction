@@ -22,5 +22,5 @@ Renderizado condicional.
 
 Ternaria equivale a un dato de tipo condicional.
 
-Los HODS permiten añadir ciertas funcionalidades en react.
+Los handle permiten añadir ciertas funcionalidades en react.
 Devuelve un array de dos valores el 0 y el 1. El representa si esta activado o desactivado y el 1 es como el interruptor del elemento.
