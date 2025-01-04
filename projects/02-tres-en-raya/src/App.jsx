@@ -25,15 +25,13 @@ function App() {
 
   const [turn, setTurn] = useState(TURNS.O)
 
-  const updateBoard = (index) =>{
+  const updateBoard = (index) => {
     const newBoard = [...board]
     newBoard[index] = turn
     setBoard(newBoard)
 
     const newTurn = turn === TURNS.O ? TURNS.X : TURNS.O
     setTurn(newTurn)
-
-    console.log(newBoard, newTurn)
   }
 
   return (
@@ -44,7 +42,7 @@ function App() {
           board.map((cell, index) => {
             return (
               <Square key={index} index={index} updateBoard={updateBoard}>
-                
+                {board[index]}
               </Square>
             )
           })
