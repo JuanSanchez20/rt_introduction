@@ -15,3 +15,9 @@ La diferencia entre el elemento y el componente es que el componente es una fact
 No se debe mutar o modificar una propiedad.
 
 Los children son lo que envuelven los elementos.
+
+Un state es una forma de ver como se debe cambiar la personalizacion de la pagina a base de alguna interaccion o estado de un elemento o etiqueta.
+
+Renderizado condicional.
+
+Ternaria equivale a un dato de tipo condicional

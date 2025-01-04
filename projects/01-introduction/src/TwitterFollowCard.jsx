@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 
-export function TwitterFollowCard({username, children}) {
+export function TwitterFollowCard({username, children, isFollowing}) {
+    const text = isFollowing ? 'Siguiendo' : 'Seguir';
+
     return (
         <article className='tw-followCard'>
             <header className='tw-followCard-header'>
@@ -14,7 +16,7 @@ export function TwitterFollowCard({username, children}) {
             </header>
             
             <aside>
-                <button className='tw-followCard-button'>Seguir</button>
+                <button className='tw-followCard-button'>{text}</button>
             </aside>
         </article>
     )
@@ -23,5 +25,6 @@ export function TwitterFollowCard({username, children}) {
 // Validación de las propiedades
 TwitterFollowCard.propTypes = {
     username: PropTypes.string.isRequired,
-    children: PropTypes.string.isRequired
+    children: PropTypes.string.isRequired,
+    isFollowing: PropTypes.bool.isRequired
 };

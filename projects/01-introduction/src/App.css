@@ -35,3 +35,7 @@
     font-weight: bold;
     cursor: pointer;
 }
+.tw-followCard-button:hover {
+    background-color: #09f;
+    transition: .3s ease background-color;
+}
