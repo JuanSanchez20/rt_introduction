@@ -4,6 +4,7 @@ import { Square } from './components/Square'
 import { TURNS } from './constants'
 import { checkWinner } from './logic/checkWinnerFrom'
 import './App.css'
+import { WinnerModal } from './components/WinnerModal'
 
 function App() {
   const [board, setBoard] = useState(Array(9).fill(null))
@@ -67,25 +68,7 @@ function App() {
         <button onClick={resetGame}>Resetea el Juego</button>
       </section>
         {
-          winner !== null && (
-            <section className="winner">
-              <div className="text">
-                <h2>
-                  {
-                    winner === false 
-                    ? 'Empate' 
-                    : `Ganador: ${winner}`
-                  }
-                </h2>
-                <header className="win">
-                  {winner && <Square>{winner}</Square>}
-                </header>
-                <footer>
-                  <button onClick={resetGame}>Empezar de nuevo</button>
-                </footer>
-              </div>
-            </section>
-          )
+          <WinnerModal resetGame={resetGame} winner={winner}/>
         }
     </main>
   )
