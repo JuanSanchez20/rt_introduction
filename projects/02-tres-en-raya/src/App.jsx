@@ -67,9 +67,7 @@ function App() {
         </Square>
         <button onClick={resetGame}>Resetea el Juego</button>
       </section>
-        {
-          <WinnerModal resetGame={resetGame} winner={winner}/>
-        }
+      <WinnerModal resetGame={resetGame} winner={winner}/>
     </main>
   )
 }
