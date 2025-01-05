@@ -1,9 +1,9 @@
 import { Square } from "./Square"
 
-export function WinnerModal(winner, resetGame) {
-    if (winner === null) return null
+export function WinnerModal({ winner, resetGame }) {
+    if (winner === null) return null;
 
-    const winnerText = winner === false ? 'Empate' : `Ganador: ${winner}`
+    const winnerText = winner === false ? 'Empate' : `Ganador: ${winner}`;
 
     return (
         <section className="winner">
@@ -19,5 +19,5 @@ export function WinnerModal(winner, resetGame) {
                 </footer>
             </div>
         </section>
-    )
+    );
 }
