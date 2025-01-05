@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import confetti from 'canvas-confetti'
-import Square from './components/Square'
+import { Square } from './components/Square'
 import './App.css'
 
 const TURNS = {
