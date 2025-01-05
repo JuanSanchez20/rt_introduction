@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import confetti from 'canvas-confetti'
 import { Square } from './components/Square'
-import { TURNS, winner_combo } from './constants'
+import { TURNS } from './constants'
+import { checkWinner } from './logic/checkWinnerFrom'
 import './App.css'
 
 function App() {
@@ -10,18 +11,6 @@ function App() {
   const [turn, setTurn] = useState(TURNS.O)
 
   const [winner, setWinner] = useState(null)
-  
-  const checkWinner = (boardToCheck) => {
-    for (const combo of winner_combo) {
-      const [a, b, c] = combo
-      if (boardToCheck[a] && 
-          boardToCheck[a] === boardToCheck[b] && 
-          boardToCheck[a] === boardToCheck[c]) {
-        return boardToCheck[a]
-      }
-    }
-    return null
-  }
 
   const checkEndGame = (newBoard) => {
     return newBoard.every((square) => square !== null)
