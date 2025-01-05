@@ -1,4 +1,5 @@
 import { Square } from "./Square"
+import PropTypes from 'prop-types';
 
 export function WinnerModal({ winner, resetGame }) {
     if (winner === null) return null;
@@ -21,3 +22,8 @@ export function WinnerModal({ winner, resetGame }) {
         </section>
     );
 }
+
+WinnerModal.propTypes = {
+    winner: PropTypes.node,  // 'children' puede ser cualquier tipo de contenido (texto, componentes, etc.)
+    resetGame: PropTypes.bool, // 'isSelected' debe ser un booleano
+};
