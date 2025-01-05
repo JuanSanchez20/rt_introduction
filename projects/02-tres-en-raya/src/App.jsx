@@ -96,6 +96,7 @@ function App() {
           {TURNS.X}
         </Square>
       </section>
+      <button onClick={resetGame}>Resetea el Juego</button>
         {
           winner !== null && (
             <section className="winner">
