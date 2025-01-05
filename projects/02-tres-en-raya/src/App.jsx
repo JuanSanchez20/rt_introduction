@@ -101,8 +101,8 @@ function App() {
         <Square isSelected={turn === TURNS.X}>
           {TURNS.X}
         </Square>
+        <button onClick={resetGame}>Resetea el Juego</button>
       </section>
-      <button onClick={resetGame}>Resetea el Juego</button>
         {
           winner !== null && (
             <section className="winner">
