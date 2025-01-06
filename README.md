@@ -6,7 +6,9 @@ Lo que quiero aprender:
 - Como funciona.
 - Que ventajas da.
 - Casos de uso.
-- Por qué es tan demandado
+- Por qué es tan demandado.
+- Tratar de entender el objetivo de esta biblioteca.
+- Que facilidad de manejo del código te puede dar.
 
 Lo que entendí en de estos proyectos fue lo siguiente:
 * Refactorizacion.
