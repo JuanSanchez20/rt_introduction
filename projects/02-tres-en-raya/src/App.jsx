@@ -7,7 +7,10 @@ import './App.css'
 import { WinnerModal } from './components/WinnerModal'
 
 function App() {
-  const [board, setBoard] = useState(Array(9).fill(null))
+  const boardFromLocalStorage = JSON.parse(window.localStorage.getItem('board'))
+  if(boardFromLocalStorage) {
+    const [board, setBoard] = useState(Array(9).fill(null))
+  }
 
   const [turn, setTurn] = useState(TURNS.O)
 
