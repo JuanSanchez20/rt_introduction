@@ -26,6 +26,8 @@ function App() {
 
     const newTurn = turn === TURNS.O ? TURNS.X : TURNS.O
     setTurn(newTurn)
+    // Guardar la partida en una constante.
+    
 
     const newWinner = checkWinner(newBoard)
     if (newWinner) {
