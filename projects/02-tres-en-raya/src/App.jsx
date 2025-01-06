@@ -47,6 +47,7 @@ function App() {
   return (
     <main className='board'>
       <h1>Tic Tac Toe</h1>
+      <button onClick={resetGame}>Resetea el Juego</button>
       <section className='game'>
         {
           board.map((cell, index) => {
@@ -65,7 +66,6 @@ function App() {
         <Square isSelected={turn === TURNS.X}>
           {TURNS.X}
         </Square>
-        <button onClick={resetGame}>Resetea el Juego</button>
       </section>
       <WinnerModal resetGame={resetGame} winner={winner}/>
     </main>
