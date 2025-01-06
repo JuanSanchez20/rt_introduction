@@ -27,7 +27,8 @@ function App() {
     const newTurn = turn === TURNS.O ? TURNS.X : TURNS.O
     setTurn(newTurn)
     // Guardar la partida en una constante.
-    
+    window.localStorage.setItem('board', JSON.stringify(newBoard))
+    window.localStorage.setItem('turn', turn)
 
     const newWinner = checkWinner(newBoard)
     if (newWinner) {
