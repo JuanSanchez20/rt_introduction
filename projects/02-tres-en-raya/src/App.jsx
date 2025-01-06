@@ -15,7 +15,10 @@ function App() {
     return saveBoard ? JSON.parse(saveBoard) : Array(9).fill(null)
   })
 
-  const [turn, setTurn] = useState(TURNS.O)
+  const [turn, setTurn] = useState(() => {
+    const saveTurn = window.localStorage.getItem('turn')
+    return saveTurn ? saveTurn : TURNS.O
+  })
 
   const [winner, setWinner] = useState(null)
 
