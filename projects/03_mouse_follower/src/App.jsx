@@ -5,12 +5,14 @@ function App() {
   const [enabled, setEnabled] = useState(false)
 
   useEffect(() => {
-    console.log('useEffect')
+    console.log('Efecto')
   })
   return (
     <>
       <h1>3er Proyecto</h1>
-      <button>{enabled ? 'Desactivar' : 'Activar'} Seguir Puntero</button>
+      <button onClick={() => setEnabled(!enabled)}>
+        {enabled ? 'Desactivar' : 'Activar'} Seguir Puntero
+      </button>
     </>
   )
 }
