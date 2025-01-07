@@ -8,8 +8,6 @@ import { WinnerModal } from './components/WinnerModal'
 
 function App() {
   const [board, setBoard] = useState(() => {
-    console.log('Inicializar estado del board')
-
     const saveBoard = window.localStorage.getItem('board')
     if (saveBoard) return JSON.parse(saveBoard)
     return saveBoard ? JSON.parse(saveBoard) : Array(9).fill(null)
