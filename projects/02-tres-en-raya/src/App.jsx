@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import confetti from 'canvas-confetti'
 import { Square } from './components/Square'
 import { TURNS } from './constants'
@@ -41,12 +41,14 @@ function App() {
     if (newWinner) {
       confetti()
       setWinner(() => newWinner)
-    }
-
-    else if (checkEndGame(newBoard)) {
+    }else if (checkEndGame(newBoard)) {
       setWinner(false)
     }
   }
+
+  useEffect(() => {
+    console.log('useEffect')
+  })
 
   const resetGame = () => {
     setBoard(Array(9).fill(null))
