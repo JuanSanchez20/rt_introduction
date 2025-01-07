@@ -5,8 +5,9 @@ function App() {
   const [enabled, setEnabled] = useState(false)
 
   useEffect(() => {
-    console.log('Efecto')
-  })
+    console.log('efecto', {enabled})
+  }, [enabled])
+
   return (
     <>
       <h1>3er Proyecto</h1>
