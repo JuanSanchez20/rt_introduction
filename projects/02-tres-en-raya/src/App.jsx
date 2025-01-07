@@ -48,7 +48,7 @@ function App() {
 
   useEffect(() => {
     console.log('useEffect')
-  }, [])
+  }, [winner])
 
   const resetGame = () => {
     setBoard(Array(9).fill(null))
