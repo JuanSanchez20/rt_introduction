@@ -25,5 +25,6 @@ Square.propTypes = {
 
 Square.defaultProps = {
     children: null,  // Si no se pasa 'children', por defecto será null
-    isSelected: false, // Si no se pasa 'isSelected', por defecto será false
+    isSelected: false,
+    index: 0 // Si no se pasa 'isSelected', por defecto será false
 };
