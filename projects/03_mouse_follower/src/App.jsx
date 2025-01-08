@@ -12,7 +12,9 @@ function App() {
       console.log({clientX, clientY})
     }
 
-    window.addEventListener('pointeermove', handleMove)
+    if (enabled) {
+    window.addEventListener('pointermove', handleMove)
+    }
   }, [enabled])
 
   return (
