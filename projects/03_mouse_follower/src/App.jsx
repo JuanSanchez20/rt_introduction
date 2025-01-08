@@ -11,13 +11,14 @@ function App() {
     const handleMove = (event) => {
       const { clientX, clientY } = event
       console.log({clientX, clientY})
-      
+
       setPosition({ x: clientX, y: clientY })
     }
 
     if (enabled) {
-    window.addEventListener('pointermove', handleMove)
+      window.addEventListener('pointermove', handleMove)
     }
+    return () => {}
   }, [enabled])
 
   return (
