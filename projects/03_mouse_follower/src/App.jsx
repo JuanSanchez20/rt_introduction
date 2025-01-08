@@ -6,6 +6,13 @@ function App() {
 
   useEffect(() => {
     console.log('efecto', {enabled})
+
+    const handleMove = (event) => {
+      const { clientX, clientY } = event
+      console.log({clientX, clientY})
+    }
+
+    window.addEventListener('pointeermove', handleMove)
   }, [enabled])
 
   return (
@@ -21,7 +28,7 @@ function App() {
         top: -25,
         width: 50,
         height: 50,
-        transform: `translate(${position.x}px, ${position.y}px)`
+        //transform: `translate(${position.x}px, ${position.y}px)`
       }}/>
       <h1>3er Proyecto</h1>
       <button onClick={() => setEnabled(!enabled)}>
