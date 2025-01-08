@@ -19,7 +19,7 @@ export const Square = ({ children, isSelected, updateBoard, index }) => {
 Square.propTypes = {
     children: PropTypes.node,  // 'children' puede ser cualquier tipo de contenido (texto, componentes, etc.)
     isSelected: PropTypes.bool, // 'isSelected' debe ser un booleano
-    updateBoard: PropTypes.func.isRequired, // 'updateBoard' debe ser una función (y es obligatoria)
+    updateBoard: PropTypes.func, // 'updateBoard' debe ser una función (y es obligatoria)
     index: PropTypes.number.isRequired, // 'index' debe ser un número (y es obligatorio)
 };
 
