@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 
 function App() {
   const [enabled, setEnabled] = useState(false)
-  //const [position, setPosition] = useState({ x: 0, y: 0 })
+  const [position, setPosition] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
     console.log('efecto', {enabled})
