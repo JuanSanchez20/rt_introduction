@@ -53,6 +53,9 @@ function App() {
   return (
     <main>
       {mounted && <FollowMouse />}
+      <button onClick={() => setMounted(!mounted)}>
+        Toggle Mounted FollowMouse
+      </button>
     </main>
   )
 }
