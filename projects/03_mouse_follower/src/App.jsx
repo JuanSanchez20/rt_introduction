@@ -23,7 +23,7 @@ const FollowMouse = () => {
       window.removeEventListener('pointermove', handleMove)
     }
   }, [enabled])
-  
+
   return (
     <>
       <div style={{
@@ -48,6 +48,7 @@ const FollowMouse = () => {
 }
 
 function App() {
+  const [mounted, setMounted] = useState(true)
 
   return (
     <main>
